@@ -1,0 +1,21 @@
+CVE-2025-42896 
+ 
+Field	Details
+CVE ID	CVE-2025-42896
+Published Date	December 9, 2025
+Authenticated / Unauthenticated	Unauthenticated attack
+CVSS Score	5.4 (Medium) (CVSS 3.1)
+CVSS Vector	CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
+Affected Application	SAP BusinessObjects Business Intelligence Platform
+Affected Component	Login page error message handler
+Affected Versions	Specific versions not disclosed publicly; patch guidance in SAP Note 3651390
+Attack Type	Server-Side Request Forgery (SSRF)
+Exploitation Complexity	Low
+Privileges Required	None
+User Interaction	Required
+Scope	Unchanged
+Impact	Confidentiality: Low, Integrity: Low, Availability: None
+Root Cause	Improper validation of URL parameters in login error message rendering
+CWE ID	CWE-918: Server-Side Request Forgery (SSRF)
+Description	The vulnerability arises because the login page error message parameter in SAP BusinessObjects BI Platform fails to properly sanitize attacker-supplied input. An attacker can craft malicious requests that force the server to fetch external URLs. This can lead to limited information disclosure or internal network probing, but does not directly impact availability.
+ 
