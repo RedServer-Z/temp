@@ -1,0 +1,25 @@
+Scan Type	Flag	Description	Why It's Needed
+TCP Connect Scan	-sT	Full handshake scan	Needed for accuracy when SYN scan is blocked or raw sockets unavailable
+SYN Scan	-sS	Stealthy half-open scan	Fast and low-noise discovery; preferred for most pentests
+UDP Scan	-sU	Finds UDP services	Critical for discovering SNMP, DNS, NTP, and other UDP services
+SCTP INIT Scan	-sY	Maps SCTP services	Used when scanning telecom/VoIP systems using SCTP
+SCTP COOKIE-ECHO Scan	-sZ	Stealth SCTP discovery	Low-noise SCTP assessment for bypassing filters
+ACK Scan	-sA	Firewall state mapping	Determines filtering rules and firewall behavior
+Window Scan	-sW	TCP window analysis	More accurate variant of ACK scan for detecting open ports
+Maimon Scan	-sM	FIN/ACK filter bypass	Used to detect ports filtered by simple packet filters
+FIN Scan	-sF	FIN-only stealth scan	Helps bypass stateless firewalls and detect open|filtered ports
+NULL Scan	-sN	No-flag stealth scan	Used to evade basic IDS/IPS and detect open|filtered ports
+XMAS Scan	-sX	XMAS flag scan	Useful for bypassing stateless firewalls
+Idle Scan	-sI	Zombie-host stealth scan	Provides complete anonymity and attribution-free scanning
+Fragmentation	-f	Packet fragmentation	Bypasses IDS/IPS that don't reassemble small fragments
+Decoy Scan	-D	IP spoofing scan	Hides the attacker’s real IP by mixing spoofed sources
+Source Port Manipulation	--source-port	Trusted port scanning	Bypasses filters expecting traffic from specific ports (e.g., 53/80)
+Version Scan	-sV	Service version detection	Identifies software versions for vulnerability mapping
+OS Detection	-O	OS fingerprinting	Helps identify OS-specific vulnerabilities
+Script Scan	-sC	Default NSE scripts	Provides automated enumeration of common weaknesses
+Full NSE Scan	--script=all	Comprehensive NSE scan	Deep inspection of services for vulns/misconfigs
+Ping Scan	-sn	Host discovery	Determine live hosts before scanning
+List Scan	-sL	DNS-only listing	Maps targets without sending packets; good for recon
+IPv6 Scan	-6	IPv6 scanning	Required for IPv6-only or dual-stack environments
+Protocol Scan	-sO	Protocol discovery	Identifies which IP protocols a host supports
+IP ID Idle Scan	--ipid	IPID-based inference	Analyzes host behavior, firewalling, and OS traits
