@@ -13,4 +13,3 @@ script.onload = function() {
    $('#container').html(config.safeLink);
 };
 
-https://zalaris-my.sharepoint.com/:u:/p/pranesh_santhanagopalakrishnan/IQD8h7htUgd2QKvqcwioMh8tAUz3kQCwI7MUjbdaMet-bfU?e=kbBUKE
