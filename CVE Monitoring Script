@@ -1,0 +1,149 @@
+Here’s a clean, professional post you can use for your project along with clear execution steps.
+
+---
+
+## 🚀 CVE Monitoring Automation Script
+
+I developed a **CVE Monitoring Automation Script** in Python that streamlines the process of tracking newly disclosed vulnerabilities across multiple technologies and products.
+
+This script integrates with the **National Vulnerability Database (NVD)** API to automatically fetch and analyze CVEs based on a predefined list of products.
+
+### 🔍 Key Features
+
+* **Automated CVE Tracking**
+
+  * Monitors a customizable list of products (e.g., Apache, Nginx, Kubernetes, Microsoft, etc.)
+
+* **Time-Based Filtering**
+
+  * Fetches CVEs for:
+
+    * Current day
+    * Previous day
+
+* **NVD API Integration**
+
+  * Uses an API key for efficient querying and higher rate limits
+
+* **Detailed CVE Insights**
+
+  * CVE ID
+  * Description
+  * CVSS Score & Severity
+  * Attack Vector & Complexity
+  * Privileges Required
+  * Impact (Confidentiality, Integrity, Availability)
+  * CWE IDs
+  * Affected Products (CPE)
+  * References
+
+* **Structured Output**
+
+  * Displays CVEs in a clean **tabular format** for easy analysis
+
+* **Rate Limiting Handling**
+
+  * Smart delays based on API key usage to avoid throttling
+
+---
+
+## ⚙️ How It Works
+
+1. A predefined list of products is maintained inside the script.
+2. The script queries the **NVD API** using keyword-based search.
+3. It fetches CVEs published within:
+
+   * Today’s date
+   * Yesterday’s date
+4. Extracts and formats detailed vulnerability data.
+5. Outputs results in a readable, structured format grouped by product.
+
+---
+
+## 🛠️ Steps to Run the Script
+
+### 1. Prerequisites
+
+* Python 3.x installed
+* Required Python library:
+
+```bash
+pip install requests
+```
+
+---
+
+### 2. Get NVD API Key
+
+* Visit: [https://nvd.nist.gov/developers/request-an-api-key](https://nvd.nist.gov/developers/request-an-api-key)
+* Generate your free API key
+
+---
+
+### 3. Configure the Script
+
+* Open the script file
+* Replace the API key:
+
+```python
+API_KEY = "your-api-key-here"
+```
+
+---
+
+### 4. Customize Products (Optional)
+
+Modify the `PRODUCTS` list in the script:
+
+```python
+PRODUCTS = ["nginx", "kubernetes", "microsoft", "apache"]
+```
+
+---
+
+### 5. Run the Script
+
+```bash
+python3 cve_monitor.py
+```
+
+---
+
+### 6. Output
+
+* Displays:
+
+  * CVEs for **today**
+  * CVEs for **yesterday**
+* Provides:
+
+  * Product-wise grouping
+  * Detailed vulnerability breakdown
+  * Final summary count
+
+---
+
+## 📊 Example Use Cases
+
+* Security monitoring for organizations
+* Threat intelligence automation
+* Vulnerability management workflows
+* Daily CVE tracking for red teams / blue teams
+
+---
+
+## 💡 Future Enhancements (Optional Ideas)
+
+* Email / Slack alerts
+* Export to CSV/JSON
+* Integration with SIEM tools
+* Dashboard visualization
+* Deduplication & prioritization
+
+---
+
+If you want, I can also:
+
+* Convert this into a **LinkedIn post**
+* Add **screenshots-style output formatting**
+* Or enhance the script (alerts, dashboards, automation pipeline)
