@@ -1,0 +1,29 @@
+### Project Description
+
+An automated **Unified Port & SSL Certificate Scanner** that replaces a previously manual security review process. It scans domains for open ports and SSL/TLS configurations, classifies cipher strength, and generates a structured HTML security report.
+
+---
+
+### Technologies Used
+
+* **Python** – Core automation and orchestration
+* **nmap** – Port scanning engine
+* **Qualys SSL Labs Free API** – SSL/TLS analysis & grading
+* **Requests (Python library)** – API communication
+* **HTML/CSS (dynamic generation)** – Self-contained report output
+
+---
+
+### Workflow / Flow
+
+1. **Input** – Domains are read from a text file.
+2. **Port Scan** – `nmap` scans for open ports and services.
+3. **SSL Scan** – SSL Labs API analyzes TLS versions, certificate details, and cipher suites.
+4. **Cipher Classification** – Ciphers are categorized (Recommended / Secure / Weak / Insecure).
+5. **Report Generation** – A consolidated, color-coded HTML report is automatically generated.
+
+---
+
+### Purpose
+
+Previously performed manually, this process is now fully automated — reducing effort, improving consistency, and generating a professional security report in a single run.
