@@ -1,0 +1,22 @@
+ 
+#	Validation Category	What to Check	Why It Matters	Example Implementation
+1	File Type (Extension)	Allow only approved extensions (.jpg, .pdf, .docx, etc.)	Prevents upload of malicious scripts	Whitelist extensions on server side
+2	MIME Type Validation	Validate actual MIME type, not just extension	Attackers can rename file extensions	Check Content-Type + server-side MIME inspection
+3	File Signature (Magic Number)	Verify file header matches expected format	Detects spoofed file types	Validate magic bytes (e.g., FF D8 FF for JPEG)
+4	File Size Limit	Set minimum and maximum size limits	Prevents DoS and storage abuse	Limit to e.g., 5MB per file
+5	Maximum Upload Count	Restrict number of files per request/user	Avoid abuse and system overload	Limit to 5 files per upload
+6	Filename Sanitization	Remove special characters, path traversal attempts	Prevents directory traversal & injection	Strip ../, null bytes, special chars
+7	Rename Uploaded Files	Generate unique server-side filenames	Prevent overwrite attacks	Use UUID or timestamp-based naming
+8	Storage Location	Store outside web root	Prevent direct execution	Save in isolated storage bucket/folder
+9	Virus/Malware Scan	Scan files before storage/use	Prevent malicious content distribution	Use antivirus APIs (e.g., ClamAV)
+10	File Content Validation	Validate structure of file (e.g., valid image format)	Detect embedded malicious payloads	Parse and re-encode images
+11	Access Control	Verify user authentication & authorization	Prevent unauthorized uploads	Check user session/token
+12	Rate Limiting	Limit upload frequency	Prevent brute-force & abuse	API rate limiting per IP/user
+13	Logging & Monitoring	Log upload attempts and failures	Detect suspicious behavior	Maintain audit logs
+14	Encryption in Transit	Use HTTPS	Prevent man-in-the-middle attacks	Enforce TLS
+15	Encryption at Rest	Encrypt stored files	Protect sensitive data	Use encrypted storage (e.g., S3 SSE)
+16	File Parsing Safeguards	Use safe libraries to process files	Avoid parser vulnerabilities	Keep libraries updated
+17	Error Handling	Return generic error messages	Prevent information leakage	Avoid exposing stack traces
+18	Content Security Policy (CSP)	Restrict file execution	Prevent XSS from uploaded files	Use CSP headers
+19	Cross-Origin Restrictions	Validate CORS policy	Prevent cross-site upload abuse	Configure strict CORS rules
+20	Backup & Retention Policy	Define file retention rules	Compliance & storage management	Auto-delete after X days
