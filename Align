@@ -8,3 +8,18 @@ Process	Assigner’s Input (Person Requesting the Work)	Doer’s Confirmation (P
 6. Autonomy Level	“If you hit blockers, ping me before spending more than 30 minutes stuck.”		Avoids wasted effort and keeps flow moving.
 7. Communication Plan	Share the completed Document in Personal Teams		Keeps communication consistent and visible.
 8. Completion & Review	Once the Document is shared will review it and get back		Clarifies when the task is considered
+
+
+| Field        | Update                                                  |
+| ------------ | ------------------------------------------------------- |
+| Tasks        | Web Application Manual Audit <br> CVE Monitoring Script |
+| Priority     | Manual Audit (6 PM)                                     |
+| Deliverables | Audit document + script progress                        |
+| Blockers     | None                                                    |
+
+| Field        | Update                                                                  |
+| ------------ | ----------------------------------------------------------------------- |
+| Tasks        | Web Application Manual Audit ✅ <br> CVE Monitoring Script (In progress) |
+| Priority     | Manual Audit completed                                                  |
+| Deliverables | Audit document shared in Teams                                          |
+| Blockers     | None                                                                    |
