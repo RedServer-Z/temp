@@ -2,3 +2,4 @@ var s = document.createElement("link");
 s.rel="stylesheet";
 s.href="https://attacker.com/test.css";
 document.head.appendChild(s);
+style-src 'self' 'unsafe-inline' data: https://*.zalaris.com https://sapui5.hana.ondemand.com https://ui5.sap.com https://maxcdn.bootstrapcdn.com https://fonts.googleapis.com https://app.powerbi.com ; font-src 'self' data: https://*.zalaris.com https://sapui5.hana.ondemand.com https://ui5.sap.com https://maxcdn.bootstrapcdn.com https://fonts.gstatic.com https://app.powerbi.com ; 
