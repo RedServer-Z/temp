@@ -86,3 +86,47 @@ CWE ID                              CWE-79
 Description                         Improper neutralization of input in Checkmk versions 2.4.0 before 2.4.0p22, and 2.3.0 before 2.3.0p43 allows an attacker that can manipulate a host's check output to inject malicious JavaScript into the Synthetic Monitoring HTML logs, which can then be accessed via a crafted phishing link.
 References                          https://checkmk.com/werk/19238
 
+
+CVE-2026-3288
+
+Field                               Details
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CVE ID                              CVE-2026-3288
+Published Date                      March 09, 2026
+Authenticated / Unauthenticated     Authenticated attack
+CVSS Score                          8.8 (HIGH) (CVSS 3.1)
+CVSS Vector                         CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+Affected Application                Not specified in CVE data
+Attack Vector                       NETWORK
+Exploitation Complexity             LOW
+Privileges Required                 LOW
+User Interaction                    NONE
+Scope                               UNCHANGED
+Impact                              Confidentiality: HIGH, Integrity: HIGH, Availability: HIGH
+CWE ID                              CWE-20
+Description                         A security issue was discovered in ingress-nginx where the `nginx.ingress.kubernetes.io/rewrite-target` Ingress annotation can be used to inject configuration into nginx. This can lead to arbitrary code execution in the context of the ingress-nginx controller, and disclosure of Secrets accessible to the controller. (Note that in the default installation, the controller can access all Secrets cluster-wide.)
+References                          https://github.com/kubernetes/kubernetes/issues/137560
+                                    http://www.openwall.com/lists/oss-security/2026/03/09/8
+
+
+CVE-2026-31802
+
+Field                               Details
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CVE ID                              CVE-2026-31802
+Published Date                      March 10, 2026
+Authenticated / Unauthenticated     Unauthenticated attack
+CVSS Score                          N/A (N/A) (N/A)
+CVSS Vector                         N/A
+Affected Application                Not specified in CVE data
+Attack Vector                       N/A
+Exploitation Complexity             N/A
+Privileges Required                 N/A
+User Interaction                    N/A
+Scope                               N/A
+Impact                              Confidentiality: N/A, Integrity: N/A, Availability: N/A
+CWE ID                              CWE-22
+Description                         node-tar is a full-featured Tar for Node.js. Prior to version 7.5.11, tar (npm) can be tricked into creating a symlink that points outside the extraction directory by using a drive-relative symlink target such as C:../../../target.txt, which enables file overwrite outside cwd during normal tar.x() extraction. This vulnerability is fixed in 7.5.11.
+References                          https://github.com/isaacs/node-tar/commit/f48b5fa3b7985ddab96dc0f2125a4ffc9911b6ad
+                                    https://github.com/isaacs/node-tar/security/advisories/GHSA-9ppj-qmqm-q256
+
