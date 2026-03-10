@@ -12,3 +12,9 @@ script.onload = function() {
    const config = $.extend(true, defaultConfig, maliciousParams);
    $('#container').html(config.safeLink);
 };
+Hexstrike AI
+Strix
+Cybersecurity AI (CAI)
+Nebula
+Neurosploit
+Deadend CLI
