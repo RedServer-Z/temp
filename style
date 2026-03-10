@@ -9,3 +9,8 @@ var d=document.createElement("div");
 d.innerText="CSP Inline Style Test";
 d.style="position:fixed;top:0;left:0;background:red;color:white;padding:20px;z-index:9999";
 document.body.appendChild(d);
+
+var l=document.createElement("link");
+l.rel="stylesheet";
+l.href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
+document.head.appendChild(l);
